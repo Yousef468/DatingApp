@@ -27,7 +27,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                         }
                     }
                 }
-                return throwError(modalStateErrors || serverError.errors || 'Server Error');
+                return throwError(modalStateErrors || serverError || 'Server Error');
             }
           })
         );
